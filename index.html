@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Servers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Game Server Directory</h1>
+        <p>Quick and simple access to your favorite servers.</p>
+    </header>
+    <main>
+        <div id="server-list"></div>
+    </main>
+    <footer>
+        <p>Created with love and Catppuccin colors</p>
+    </footer>
+    <script>
+        async function loadServers() {
+            const response = await fetch('servers.json');
+            const servers = await response.json();
+
+            const serverList = document.getElementById('server-list');
+            servers.forEach(server => {
+                const serverDiv = document.createElement('div');
+                serverDiv.classList.add('server-card');
+                serverDiv.innerHTML = `
+                    <h2>${server.gameName} - ${server.serverName}</h2>
+                    <p><strong>IP:</strong> ${server.ip || 'N/A'}</p>
+                    <p><strong>Port:</strong> ${server.port || 'N/A'}</p>
+                    <p><strong>Password:</strong> ${server.password || 'N/A'}</p>
+                `;
+                serverList.appendChild(serverDiv);
+            });
+        }
+
+        loadServers();
+    </script>
+</body>
+</html>

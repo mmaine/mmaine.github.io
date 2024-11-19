@@ -1,0 +1,75 @@
+/* Catppuccin theme: Mocha */
+:root {
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext: #a6adc8;
+    --overlay: #6c7086;
+    --surface0: #45475a;
+    --surface1: #313244;
+    --surface2: #1e1e2e;
+    --accent: #f38ba8;
+    --highlight: #a6e3a1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--mantle);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--base);
+    padding: 20px;
+    text-align: center;
+    color: var(--highlight);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    color: var(--subtext);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.server-card {
+    background-color: var(--surface1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--overlay);
+    width: 300px;
+    color: var(--text);
+}
+
+.server-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.server-card p {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--crust);
+    color: var(--subtext);
+    font-size: 0.9rem;
+}

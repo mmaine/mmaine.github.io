@@ -1,0 +1,23 @@
+[
+    {
+        "gameName": "Minecraft",
+        "serverName": "CoolCraft",
+        "ip": "123.45.67.89",
+        "port": "25565",
+        "password": ""
+    },
+    {
+        "gameName": "Counter-Strike: GO",
+        "serverName": "Global Elite",
+        "ip": "csgo.eliteserver.com",
+        "port": "27015",
+        "password": "letmein"
+    },
+    {
+        "gameName": "Valheim",
+        "serverName": "Viking Haven",
+        "ip": "",
+        "port": "",
+        "password": "dragon"
+    }
+]
